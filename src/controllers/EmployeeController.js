@@ -1,0 +1,17 @@
+const EmployeeService = require('../services/EmployeeService')
+
+const {Router} = require('express')
+
+const EmployeeController = Router()
+
+EmployeeController.post('', (req, res)=>{
+ const {name, position} = req.body
+ try {
+    EmployeeService.store({name, position})
+    res.status(201).json()
+ } catch (error) {
+    console.error(error)
+    res.status(500).json({error: ''})
+ }
+})
+module.exports = EmployeeController
