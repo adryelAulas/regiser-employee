@@ -13,3 +13,11 @@ git status
 git add .
 
 git commit -m "post employee"
+
+git log
+
+git push --set-upstrem origin feature-25-post-employee
+
+git checkout main
+
+git pull
