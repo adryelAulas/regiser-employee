@@ -1,0 +1,15 @@
+npm init -y
+
+npm add express
+
+choco install git
+
+### 25
+
+git checkout -b feature-25-post-employee
+
+git status
+
+git add .
+
+git commit -m "post employee"
