@@ -82,7 +82,7 @@ git commit -m "feature read employee"
 
 git log
 
-git push --set-upstrem origin feature-27-read-employee
+git push --set-upstream origin feature-27-read-employee
 
 git checkout main
 
