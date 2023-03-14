@@ -21,3 +21,70 @@ git push --set-upstrem origin feature-25-post-employee
 git checkout main
 
 git pull
+
+### 26
+
+git checkout -b feature-26-config-postgresql-save-employee
+
+
+git status
+
+git add .
+
+git commit -m "post employee"
+
+git log
+
+git push --set-upstrem origin feature-25-post-employee
+
+git checkout main
+
+git pull
+
+npm add pg
+
+npm add dotenv
+
+npm add nodemon -D
+
+"scripts":{
+    "dev": "nodemon src/index.js"
+},
+npm dev
+
+create database postgres_nodejs_express_jwt_employee_task_db;
+
+\c postgres_nodejs_express_jwt_employee_task_db;
+
+\dt
+
+create table employees (
+    id serial primary key,
+    name text not null,
+    position text,
+    created_at timestamp not null,
+    updated_at timestamp not null
+);
+
+select * from employees;
+
+\q
+
+### 27
+
+git checkout -b feature-27-read-employee
+
+git status
+
+git add .
+
+git commit -m "feature read employee"
+
+git log
+
+git push --set-upstream origin feature-27-read-employee
+
+git checkout main
+
+git pull
+
