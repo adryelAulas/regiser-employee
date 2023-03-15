@@ -88,3 +88,20 @@ git checkout main
 
 git pull
 
+### 28
+
+git checkout -b checkout -b feature-28-delete-employee
+
+git status
+
+git add .
+
+git commit -m "feature read employee"
+
+git log
+
+git push --set-upstream origin feature-27-read-employee
+
+git checkout master
+
+git pull
