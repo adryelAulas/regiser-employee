@@ -14,7 +14,7 @@ git add .
 
 git commit -m "post employee"
 
-git log
+
 
 git push --set-upstrem origin feature-25-post-employee
 
@@ -33,7 +33,7 @@ git add .
 
 git commit -m "post employee"
 
-git log
+
 
 git push --set-upstrem origin feature-25-post-employee
 
@@ -80,7 +80,7 @@ git add .
 
 git commit -m "feature read employee"
 
-git log
+
 
 git push --set-upstream origin feature-27-read-employee
 
@@ -98,7 +98,7 @@ git add .
 
 git commit -m "feature read employee"
 
-git log
+
 
 git push --set-upstream origin feature-27-read-employee
 
@@ -117,10 +117,29 @@ git add .
 
 git commit -m "feature get employee by id"
 
-git log
+
 
 git push --set-upstream origin feature-29-get-employee-by-id
 
 git checkout master
 
 git pull
+
+
+### 30
+git checkout -b feature-30-update-employee
+
+git status
+
+git add .
+
+git commit -m "feature update employee"
+
+
+
+git push --set-upstream origin feature-30-update-employee
+
+git checkout master
+
+git pull
+
