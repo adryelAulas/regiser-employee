@@ -105,3 +105,22 @@ git push --set-upstream origin feature-27-read-employee
 git checkout master
 
 git pull
+
+
+### 29
+
+git checkout -b checkout -b feature-29-get-employee-by-id
+
+git status
+
+git add .
+
+git commit -m "feature get employee by id"
+
+git log
+
+git push --set-upstream origin feature-29-get-employee-by-id
+
+git checkout master
+
+git pull

@@ -1,6 +1,14 @@
 const Database = require('../config/Database')
 
 
+const findEmployeeById = async (id) =>{
+  const response = await Database.query(`
+    select * from employees where id=$1
+  `,[
+    id
+  ])
+  return response.rows[0]
+}
 const findAll = async () =>{
   const response = await Database.query(`
     select * from employees order by id
@@ -39,5 +47,5 @@ const findId = async (id) =>{
     return response.rows[0].id
 }
 module.exports = {
-    findAll, insert, findId, remove
+    findAll, insert, findId, remove, findEmployeeById
 }

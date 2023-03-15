@@ -14,6 +14,27 @@ EmployeeController.get('', async (req, res)=>{
  }
 })
 
+EmployeeController.get('/:id', async(req, res)=>{
+   const {id} = req.params
+   
+   try {
+      const existsEmployee = await EmployeeService.existsId(id)
+      if(existsEmployee){
+         try {
+         res.status(200).json(await EmployeeService.show(id))
+         } catch (error) {
+            console.log(error)
+            res.status(500).json({error: 'EmployeeService.show(id) is not working' })
+         }
+      }else {
+         res.status(404).json({error: `Id: ${id} ot found`})
+      }
+  
+   } catch (error) {
+      console.log(error)
+       res.status(500).json({error: 'EmployeeService.existsId(id) is not working' })
+   }
+  })
 
 EmployeeController.post('', (req, res)=>{
    const {name, position} = req.body
@@ -53,4 +74,6 @@ EmployeeController.post('', (req, res)=>{
        res.status(500).json({error: 'EmployeeService.existsId(id) is not working' })
    }
   })
+
+
 module.exports = EmployeeController

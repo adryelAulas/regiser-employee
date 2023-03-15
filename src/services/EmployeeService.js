@@ -21,6 +21,9 @@ EmployeeRepository.insert({name, position})
 const destroy = async (id)=>{
     return await EmployeeRepository.remove(id)
 }
+const show = async (id)=>{
+    return await EmployeeRepository.findEmployeeById(id)
+}
 module.exports = {
-    index, store, existsId, destroy 
+    index, store, existsId, destroy, show
 }
