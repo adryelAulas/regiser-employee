@@ -143,3 +143,20 @@ git checkout master
 
 git pull
 
+
+### 31
+
+git checkout -b feature-30-update-employee
+
+git status
+
+git add .
+
+git commit -m "feature patch employee"
+
+git push --set-upstream origin feature-31-patch-employee
+
+git checkout master
+
+git pull
+
