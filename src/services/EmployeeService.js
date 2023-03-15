@@ -24,6 +24,10 @@ const destroy = async (id)=>{
 const show = async (id)=>{
     return await EmployeeRepository.findEmployeeById(id)
 }
+
+const update= async({id, name, position, created_at}) =>{
+    return await EmployeeRepository.update({id, name, position, created_at})
+}
 module.exports = {
-    index, store, existsId, destroy, show
+    index, store, existsId, destroy, show, update
 }
