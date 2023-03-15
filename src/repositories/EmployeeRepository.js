@@ -57,6 +57,18 @@ const response = await Database.query(`
 ])
 return response.rows[0]
 }
+
+const patchPosition = async ({id, position}) =>{
+  const response = await Database.query(`
+  update employees
+  set position=$1, updated_at=current_timestamp
+  where id=$2 returning position, updated_at
+  `, [
+    position, id
+  ])
+
+  return response.rows[0]
+}
 module.exports = {
-    findAll, insert, findId, remove, findEmployeeById, update 
+    findAll, insert, findId, remove, findEmployeeById, update, patchPosition 
 }
