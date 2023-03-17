@@ -12,6 +12,9 @@ const index = async() =>{
     return await EmployeeRepository.findAll()
 }
 
+const getEmployeeByName = async (value) =>{
+    return await EmployeeRepository.getEmployeeByName(value)
+}
 const store = ({name, position} ) =>{
 // console.log('EmployeeService: ', name, position)
 
@@ -33,5 +36,5 @@ const patchPosition= async ({id, position})=>{
     return await EmployeeRepository.patchPosition({id, position})
 }
 module.exports = {
-    index, store, existsId, destroy, show, update, patchPosition
+    index, store, existsId, destroy, show, update, patchPosition, getEmployeeByName
 }
