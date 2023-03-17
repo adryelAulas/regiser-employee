@@ -16,6 +16,14 @@ const findAll = async () =>{
   return response.rows
 }
 
+const getEmployeeByName = async (value)=>{
+const response = await Database.query(`
+select * from employees where lower(name) like lower('%' || $1|| '%')
+
+`,[value])
+
+return response.rows
+}
 const insert = ({name, position}) => {
   Database.query(`
   insert into employees (
@@ -70,5 +78,5 @@ const patchPosition = async ({id, position}) =>{
   return response.rows[0]
 }
 module.exports = {
-    findAll, insert, findId, remove, findEmployeeById, update, patchPosition 
+    findAll, insert, findId, remove, findEmployeeById, update, patchPosition, getEmployeeByName
 }

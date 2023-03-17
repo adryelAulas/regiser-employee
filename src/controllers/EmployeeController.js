@@ -6,11 +6,17 @@ const EmployeeController = Router()
 
 EmployeeController.get('', async (req, res) => {
    const { name, position } = req.body
+   const {value} =req.query
    try {
-      res.status(200).json(await EmployeeService.index())
+      if(value){
+res.status(200).json(await EmployeeService.getEmployeeByName(value))
+      }else{
+      
+         res.status(200).json(await EmployeeService.index())
+      }
    } catch (error) {
       console.error(error)
-      res.status(500).json({ error: 'EmployeeService.index() is not working' })
+      res.status(500).json({ error: 'EmployeeService.index() or EmployeeService.getEmployeeByName(value) is not working' })
    }
 })
 

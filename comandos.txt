@@ -162,7 +162,7 @@ git pull
 
 
 ### 33
-git checout -b feature-33-cors
+git checkout -b feature-33-cors
 
 ## cors
 npm add cors
@@ -177,5 +177,21 @@ git push --set-upstream origin feature-33-cors
 
 git checkout main
 
+
+git pull
+
+
+### 35
+
+git checkout -b feature-35-get-by-name
+
+
+git add .
+
+git commit -m "feature 35 get by name"
+
+git push --set-upstream origin feature-35-get-by-name
+
+git checkout main
 
 git pull
