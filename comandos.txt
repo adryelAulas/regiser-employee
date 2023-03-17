@@ -160,3 +160,22 @@ git checkout master
 
 git pull
 
+
+### 33
+git checout -b feature-33-cors
+
+## cors
+npm add cors
+
+git add .
+
+git commit -m "feature 33 cors"
+
+git push --set-upstream origin feature-33-cors
+
+## ctrl + alt + click link
+
+git checkout main
+
+
+git pull
