@@ -9,7 +9,7 @@ EmployeeController.get('', async (req, res) => {
    const {value} =req.query
    try {
       if(value){
-res.status(200).json(await EmployeeService.getEmployeeByName(value))
+      res.status(200).json(await EmployeeService.getEmployeeByName(value))
       }else{
       
          res.status(200).json(await EmployeeService.index())

@@ -3,11 +3,10 @@ const EmployeeController = require('../repositories/EmployeeRepository')
 const EmployeeRepository = require('../repositories/EmployeeRepository')
 
 
-const existsId = async (id) =>{
-    const value = await EmployeeRepository.findId(id)
-    return value ? true : false
+const existsId = async (id) => {
+    const employee = await EmployeeRepository.findId(id)
+    return !!employee
 }
-
 const index = async() =>{
     return await EmployeeRepository.findAll()
 }

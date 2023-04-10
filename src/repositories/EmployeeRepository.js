@@ -58,7 +58,7 @@ const findId = async (id) =>{
 const update = async({id, name, position, created_at}) =>{
 const response = await Database.query(`
   update employees
-  set name = $1, position=$2, created_at=$3, updated_at=current_timestamp
+  set name=$1, position=$2, created_at=$3, updated_at=current_timestamp
   where id=$4 returning *  
 `,[
   name, position, created_at, id

@@ -1,7 +1,8 @@
 const { Pool } = require('pg')
 
 const { HOST_DB, PORT_DB, DATABASE_DB, USER_DB, PASSWORD_DB } = process.env
-console.log(!HOST_DB ? 'HOST_DB is not configured on .env'
+console.log(
+    !HOST_DB ? 'HOST_DB is not configured on .env'
     : !PORT_DB ? 'PORT_DV is not configured on .env'
         : !DATABASE_DB ? 'DATABASE_DB is not configured on .env'
             : !USER_DB ? 'USER_DB is not configured on .env'
