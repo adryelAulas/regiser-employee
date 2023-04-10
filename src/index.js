@@ -12,4 +12,4 @@ app.use(cors())
 
 app.use(routes)
 
-app.listen(8080, () => console.log('Server port 8080'))
+app.listen(port, () => console.log(`Server port ${port}`))
