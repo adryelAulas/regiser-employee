@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/index.js",
-    "vercel-build": "npx controllers repositories services deploy"
+    "vercel-build": "npx  src config controllers repositories services deploy"
   },
   "keywords": [],
   "author": "",
