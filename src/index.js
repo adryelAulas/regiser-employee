@@ -5,6 +5,7 @@ const cors = require('cors')
 const express = require('express')
 const app = express()
 
+const port = process.env.PORT || 3001;
 
 app.use(express.json())
 
@@ -12,4 +13,4 @@ app.use(cors())
 
 app.use(routes)
 
-app.listen(8080, () => console.log('Server port 8080'))
+app.listen(port, () => console.log(`Server port ${port}`))
