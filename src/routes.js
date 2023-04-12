@@ -1,4 +1,4 @@
-const EmployeeController = require('./controllers/EmployeeController')
+const EmployeeController = require('../controllers/EmployeeController')
 
 const express = require('express')
 
