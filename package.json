@@ -10,7 +10,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "vercel-build":"npx src deploy",
+    "build":"echo 'Não há comando de compilação necessário'",
+    "vercel-build": "npm run build",
     "dev": "nodemon"
   },
   "keywords": [],
